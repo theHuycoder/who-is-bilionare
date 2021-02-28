@@ -5,7 +5,7 @@ let questions =[
             answers:[
                 {
                     ans:"Fernando Torres",
-                    correct:true
+                    correct:false
                 },
                 {
                     ans:"Luis Suarez",
@@ -13,7 +13,7 @@ let questions =[
                 },
                 {
                     ans:"Lionel Messi",
-                    correct:false,
+                    correct:true,
                 }, {
                     ans:"Cristiano Ronaldo",
                     correct:false,

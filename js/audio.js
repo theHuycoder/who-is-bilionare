@@ -1,34 +1,24 @@
-const audioTag = document.createElement("audio");
-const sourceTag = document.createElement("source");
-sourceTag.type= "audio/ogg";
-audioTag.crossOrigin = "anonymous";
-// Audio sources
-const startAudioLink = "audio/start.ogg"
-const questions1To5AudioLink = "audio/question1to5.ogg";
-// Start Game//
-function playStartGameAudio() {
-    sourceTag.src = startAudioLink;
-    audioTag.appendChild(sourceTag);
-    audioTag.crossOrigin = "anonymous";
-    audioTag.autoplay = true;
+//Welcome Audio
+let startAudioLink = "audio/start.ogg"
+let welcomeAudio = new Audio(startAudioLink);
+function playWelcomeAudio() {
+    welcomeAudio.play();
 }
-function endStartGameAudio() {
-    audioTag.pause();
+function stopWelcomeAudio() {
+    welcomeAudio.pause();
 }
-window.onload = ()=>{
-    playStartGameAudio();
+//from 1 To 5 Audio
+let from1To5link = "audio/question1to5.ogg";
+let from1To5Audio = new Audio(from1To5link);
+function playFrom1To5Audio(){
+    from1To5Audio.play();
 }
-function playQuestion1To5() {
-    audioTag.id = "question1to5";
-    sourceTag.type = "audio/ogg";
-    sourceTag.src = questions1To5AudioLink;
-    audioTag.appendChild(sourceTag);
-    audioTag.autoplay = true;
-    document.body.appendChild(audioTag);
+function stopFrom1To5Audio() {
+    from1To5Audio.pause();
 }
-// In game 1 to 5
-
 export {
-    endStartGameAudio,
-    playQuestion1To5
+    playWelcomeAudio,
+    stopWelcomeAudio,
+    playFrom1To5Audio,
+    stopFrom1To5Audio
 }

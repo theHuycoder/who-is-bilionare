@@ -1,12 +1,13 @@
-import {endStartGameAudio, playQuestion1To5} from "./audio.js";
+import {playWelcomeAudio,stopWelcomeAudio,playFrom1To5Audio,stopFrom1To5Audio} from "./audio.js";
 import questions from "./question.js";
 
 const btnStart = document.getElementById("btn-start");
 const header = document.getElementById("header");
+const playField = document.getElementById("play-field");
 const questionShow = document.getElementById("question-show");
 const answersShow = document.getElementById("answers-show");
 let questionsGroup = questions[Math.floor(getRandomNumber(0, 1))];
-let currentIndex = 0;
+let currentIndex = 0; // cau hoi hien tai
 function getRandomNumber(min, max) {
     return (Math.random() * (max - min) + min);
 }
@@ -23,8 +24,6 @@ function onGame(current) {
     let randomTrueIndex = Math.floor(getRandomNumber(0, 4));
     shuffleAnswersGivenIndex(answers, randomTrueIndex)
     questionShow.innerText = currentQuestion.quest;
-    console.log(answers);
-    console.log(randomTrueIndex);
     for (let i = 0; i < answers.length; i++) {
         let createDiv = document.createElement("div");
         createDiv.classList.add("col-6");
@@ -54,7 +53,8 @@ function onGame(current) {
                 otherAnswer[i].style.pointerEvents = "none";
             }
             setTimeout(()=>{
-                otherAnswer[randomTrueIndex].classList.add("bg-success");
+                otherAnswer[randomTrueIndex].classList.add("bg-correct");
+                otherAnswer[randomTrueIndex].classList.add("blink-1");
                 if (i === randomTrueIndex){
                     currentIndex+=1;
                     setTimeout(()=>{
@@ -71,11 +71,13 @@ function onGame(current) {
     }
 
 }
-
+window.onload = ()=>{
+    playWelcomeAudio();
+}
 btnStart.addEventListener("click", () => {
-
-    endStartGameAudio();
-    playQuestion1To5();
+    stopWelcomeAudio();
+    playFrom1To5Audio();
     header.classList.add("d-none");
+    playField.classList.remove("d-none");
     onGame(currentIndex);
 });

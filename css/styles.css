@@ -71,7 +71,7 @@ body{
     box-shadow: none;
 }
 .bg-question {
-    background: url("../images/quesBg@3x.png") no-repeat center/contain;
+    background: url("../images/questBg.png") no-repeat center/contain;
     text-align: center;
     padding: 2rem 0;
 }
@@ -79,12 +79,47 @@ body{
     text-align: center;
     padding: 2rem 0;
     font-size: 1.5rem;
+    cursor: pointer;
+}
+.answer:hover{
+    opacity: 0.6;
 }
 .bg-answer {
     background: url("../images/quesBg@3x.png") no-repeat center/contain;
 }
 .bg-answer-choose{
     background: url("../images/bgChoose.png") no-repeat center/contain;
+}
+.bg-correct {
+    background: url("../images/correct.png") no-repeat center/contain;
+
+}
+.blink-1 {
+    -webkit-animation: blink-1 0.6s both;
+    animation: blink-1 0.6s both;
+}
+
+@-webkit-keyframes blink-1 {
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+@keyframes blink-1 {
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0;
+    }
 }
 
 /*MAIN*/
