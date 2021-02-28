@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 385 130" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="a">
+   <stop stop-color="#0d56db" offset="0"/>
+   <stop stop-color="#061176" offset="1"/>
+  </linearGradient>
+  <linearGradient id="b" x1="186.73" x2="186.73" y1="45.57" y2="1.7785" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#fff" stop-opacity="0" offset="0"/>
+   <stop stop-color="#fff" offset="1"/>
+  </linearGradient>
+  <linearGradient id="d" x2="0" y1="9.0263" y2="120.61" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+  <linearGradient id="c" x2="0" y1="120.58" y2="7.7862" gradientUnits="userSpaceOnUse" xlink:href="#a"/>
+ </defs>
+ <path d="m66.22 7.9564h253.36a57.583 56.143 0 0 1 57.583 56.143v1.4396a57.583 56.143 0 0 1 -57.583 56.143h-253.36a57.583 56.143 0 0 1 -57.583 -56.143v-1.4396a57.583 56.143 0 0 1 57.583 -56.143" fill="url(#c)" stroke="url(#d)" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25"/>
+ <path d="m69.648 15.607h247.06a48.225 38.806 0 0 1 48.225 38.806v3.0556a48.225 38.806 0 0 1 -48.225 38.806h-247.06a48.225 38.806 0 0 1 -48.225 -38.806v-3.0556a48.225 38.806 0 0 1 48.225 -38.806" fill="url(#b)"/>
+</svg>

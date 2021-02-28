@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    color: white;
+}
+#wrapper-all {
+    background: url("../images/bg.png") no-repeat center/cover;
+    height: 100vh;
+}
+#header {
+    text-align: center;
+}
+
+/*Animation*/
+.slide-in-blurred-top {
+    -webkit-animation: slide-in-blurred-top 3s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: slide-in-blurred-top 3s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+@keyframes slide-in-blurred-top {
+    0% {
+        -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+        transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+        -webkit-transform-origin: 50% 0%;
+        transform-origin: 50% 0%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+        transform: translateY(0) scaleY(1.5) scaleX(1.5);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+#btn-actions{
+    width: 60vw;
+    margin: 8rem auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#btn-actions .btn {
+    background: url("../images/blueButton.svg") no-repeat center !important;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    padding: 2rem 8rem;
+    position: relative;
+}
+#btn-actions #btn-start {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+#btn-actions .btn:hover {
+    opacity: 0.6;
+}
+#btn-actions .btn:active {
+    bottom: -2px;
+    right: -2px;
+    outline: none;
+}
+#btn-actions .btn:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+.bg-question {
+    background: url("../images/quesBg@3x.png") no-repeat center/contain;
+    text-align: center;
+    padding: 2rem 0;
+}
+.answer{
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.5rem;
+}
+.bg-answer {
+    background: url("../images/quesBg@3x.png") no-repeat center/contain;
+}
+.bg-answer-choose{
+    background: url("../images/bgChoose.png") no-repeat center/contain;
+}
+
+/*MAIN*/
+#play-field {
+    padding-top: 30rem;
+}
