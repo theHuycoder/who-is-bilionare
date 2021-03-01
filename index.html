@@ -27,6 +27,14 @@
             </button>
         </div>
     </header>
+    <div id="score" class="d-none text-center">
+        <h1 class="text-center">
+            Câu số <span id="score-show"></span>
+        </h1>
+        <h2 id="money" class="text-center text-success">
+            <span id="money-show"></span>$
+        </h2>
+    </div>
     <main id="play-field" class="d-none">
         <div class="container">
             <div class="row" id="question">
@@ -40,6 +48,19 @@
             </div>
         </div>
     </main>
+    <div id="milionare" class="d-none text-center">
+        <h1>Chúc mừng bạn đã đạt được 30.000 Mỹ kim</h1>
+        <h2 class="text-warning">
+            Triệu phú đây rồi!
+        </h2>
+        <img src="images/donald_trump_PNG36.png" alt="">
+        <button class="btn btn-warning btn-lg d-block  reset">Chơi lại</button>
+    </div>
+    <footer id="end-game" class="d-none text-center">
+        <h1>Chùng mừng bạn đã nhận được <span id="final-money"></span> Mỹ Kim</h1>
+        <img src="images/trump.png" alt="">
+        <button class="btn btn-warning btn-lg d-block  reset">Chơi lại</button>
+    </footer>
 </div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -52,8 +73,9 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-<script type="module" src="js/audio.js" defer></script>
-<script type="module" src="js/question.js"></script>
-<script type="module" src="js/game.js" defer></script>
+<script type="module" src="howlerjs/howler.js-master/dist/howler.min.js" defer crossorigin="anonymous"></script>
+<script type="module" src="js/audio.js" defer crossorigin="anonymous" defer></script>
+<script type="module" src="js/question.js" defer crossorigin="anonymous"></script>
+<script type="module" src="js/game.js" defer crossorigin="anonymous"></script>
 </body>
 </html>

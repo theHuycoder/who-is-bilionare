@@ -46,12 +46,16 @@ body{
     justify-content: space-evenly;
 }
 #btn-actions .btn {
-    background: url("../images/blueButton.svg") no-repeat center !important;
+    background: url("../images/blueButton.svg") no-repeat center;
     border: none;
     outline: none;
     font-size: 1.5rem;
     padding: 2rem 8rem;
     position: relative;
+}
+#btn-start {
+    background: url("../images/button.png") no-repeat center/contain !important;
+    font-weight: bold;
 }
 #btn-actions #btn-start {
     font-size: 3rem;
@@ -76,8 +80,8 @@ body{
     padding: 2rem 0;
 }
 .answer{
-    text-align: center;
-    padding: 2rem 0;
+    text-align: left;
+    padding: 2rem 0 2rem 7rem;
     font-size: 1.5rem;
     cursor: pointer;
 }
@@ -121,8 +125,22 @@ body{
         opacity: 0;
     }
 }
-
-/*MAIN*/
-#play-field {
-    padding-top: 30rem;
+/*SCORE*/
+#score{
+    padding: 15rem 0 10rem;
+}
+#money{
+    font-size: 4rem;
+    font-weight: bold;
+}
+#milionare {
+    padding-top: 4rem;
+}
+#milionare img{
+    width: 800px;
+}
+.reset {
+    font-size: 2rem;
+    width: 200px;
+    margin:3rem auto;
 }
