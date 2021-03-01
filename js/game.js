@@ -100,6 +100,7 @@ function onGame(current) {
             let breakTime = 8;
             stopFrom1To5Audio();
             playWinQuest5Audio();
+            score.classList.add("d-none");
             questionShow.innerHTML = "Chúc mừng bạn đã vượt qua 5 câu hỏi đầu tiên!! Nghỉ ngơi" +
                 " chút nào!";
             let countDown = setInterval(()=>{
@@ -108,14 +109,11 @@ function onGame(current) {
                 if (breakTime ===0){
                     clearInterval(countDown);
                     answersShow.innerHTML = "";
+                    score.classList.remove("d-none");
                     playFrom6QuestAudio();
                     onGame(currentIndex);
                 }
             },1000);
-            // setTimeout(()=>{
-            //     playFrom6QuestAudio()
-            //     onGame(currentIndex);
-            // },8000)
         }
         else if (currentIndex === 15) {// Nếu trả lời hết 15 câu
             playField.classList.add("d-none");
