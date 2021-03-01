@@ -3,6 +3,7 @@
 }
 body{
     color: white;
+    /*overflow-x: hidden;*/
 }
 #wrapper-all {
     background: url("../images/bg.png") no-repeat center/cover;
@@ -84,6 +85,9 @@ body{
     padding: 2rem 0 2rem 7rem;
     font-size: 1.5rem;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 6rem;
 }
 .answer:hover{
     opacity: 0.6;
@@ -127,7 +131,7 @@ body{
 }
 /*SCORE*/
 #score{
-    padding: 15rem 0 10rem;
+    padding: 10rem 0 5rem;
 }
 #money{
     font-size: 4rem;
