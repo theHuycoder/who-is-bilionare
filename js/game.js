@@ -2,7 +2,7 @@
 import {
     playWelcomeAudio, stopWelcomeAudio, playFrom1To5Audio, stopFrom1To5Audio,
     playCorrectAnswer, stopCorrectAnswer, playWrongAnswer, stopWrongAnswer,
-    playAudio5050,stopAudio5050, playWinQuest5Audio,stopWinQuest5Audio,playFrom6QuestAudio
+    playAudio5050,stopAudio5050, playWinQuest5Audio,stopWinQuest5Audio,playFrom6QuestAudio,stopFrom6QuestAudio
 } from "./audio.js";
 import questions from "./question.js";
 // DOM Define
@@ -119,6 +119,8 @@ function onGame(current) {
             playField.classList.add("d-none");
             score.classList.add("d-none");
             millionaire.classList.remove("d-none");
+            stopFrom6QuestAudio();
+            playWinQuest5Audio();
         } else {
             onGame(currentIndex);// Nếu trả lời đúng play lại game
         }
@@ -166,6 +168,7 @@ function onGame(current) {
                     otherAnswer[randomTrueIndex].classList.add("blink-1");
                     playWrongAnswer();
                     stopFrom1To5Audio();
+                    stopFrom6QuestAudio();
                     setTimeout(() => {
                         playField.classList.add("d-none");
                         endGame.classList.remove("d-none");

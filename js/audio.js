@@ -95,5 +95,6 @@ export {
     stopAudio5050,
     playWinQuest5Audio,
     stopWinQuest5Audio,
-    playFrom6QuestAudio
+    playFrom6QuestAudio,
+    stopFrom6QuestAudio
 }
