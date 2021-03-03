@@ -31,7 +31,7 @@ body{
     }
     100% {
         -webkit-transform: translateY(0) scaleY(1) scaleX(1);
-        transform: translateY(0) scaleY(1.5) scaleX(1.5);
+        transform: translateY(0) scaleY(1.2) scaleX(1.2);
         -webkit-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
         -webkit-filter: blur(0);
@@ -137,6 +137,7 @@ body{
     font-size: 4rem;
     font-weight: bold;
 }
+
 #millionaire {
     padding-top: 4rem;
 }
@@ -147,4 +148,19 @@ body{
     font-size: 2rem;
     width: 200px;
     margin:3rem auto;
+}
+
+@media (max-width: 1300px ) {
+    #btn-actions .btn{
+        padding:2rem 4rem;
+    }
+    #score{
+        padding: 3rem 0 1rem;
+    }
+    #play-field {
+        position: fixed;
+        bottom: 1rem;
+        margin: 0 auto;
+        width: 100%;
+    }
 }

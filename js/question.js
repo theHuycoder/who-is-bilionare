@@ -66,7 +66,7 @@ let questions =[
         }
         ,
         {
-            quest:"El Nino' là gì?",
+            quest:"El Nino là gì?",
             answers:[
                 {
                     ans:"Một loại dương xỉ",
@@ -344,7 +344,7 @@ let questions =[
             quest:"El Pulga là biệt danh của cầu thủ nào?",
             answers:[
                 {
-                    ans:"Leo Messi",
+                    ans:"Lionel Messi",
                     correct:true
                 },
                 {

@@ -1,0 +1,8 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background: url("../images/bg.png") no-repeat center/cover;
+    height: 100vh;
+    padding-top: 5rem;
+}
